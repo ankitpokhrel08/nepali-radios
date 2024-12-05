@@ -2,7 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Signup from "./pages/Signup.jsx";
 import Landing from "./user/Landing.jsx";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import Login from "./pages/Login.jsx";
 import { firebaseAuth } from "./context/Firebase.jsx";
 
@@ -51,7 +51,7 @@ function App() {
   if (user) {
     return (
       <>
-        <Landing user={user} signOut={signOut} firebaseAuth={firebaseAuth} />
+        <Landing />
       </>
     );
   }
